@@ -31,6 +31,6 @@ Swarm::~Swarm()
     for(int i=0;i<swarmSize;i++)
     {
         delete swarm.at(i);
-        cout<<"Deleted particle"<<endl;
+        cout<<"Deleted particle: "<<i<<endl;
     }
 }
