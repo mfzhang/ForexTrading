@@ -17,6 +17,11 @@
 class ParameterSwarm:public Swarm {
 public:
     ParameterSwarm(int s);
+
+    void resetSwarm() override;
+
+    void initialiseSwarm() override;
+
 private:
 
 };

@@ -21,6 +21,7 @@ public:
     void printSelf() override;
 
     void initialiseParticle() override;
+
 private:
     
 };

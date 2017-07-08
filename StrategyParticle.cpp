@@ -26,7 +26,7 @@ void StrategyParticle::initialiseParticle()
     std::uniform_real_distribution<> dist(lower_bound, upper_bound);
     
     for (int i = 0; i < 2; i++) {
-        parameters[i] =dist(e2);;
+        parameters.at(i) =dist(e2);;
     }
 }
 

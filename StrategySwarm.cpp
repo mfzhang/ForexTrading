@@ -20,7 +20,12 @@ StrategySwarm::StrategySwarm(int s)
     swarmSize=s;
     
     swarm.resize(s);
-    
+
+}
+
+void StrategySwarm::initialiseSwarm()
+{
+
     for (int i=0;i<swarmSize;i++)
     {
         swarm.at(i)=new StrategyParticle(2);
@@ -29,12 +34,15 @@ StrategySwarm::StrategySwarm(int s)
     }
 }
 
-void StrategySwarm::initialiseSwarm()
-{
-
-}
-
 void StrategySwarm::resetSwarm()
 {
-
+    int s=swarm.at(0)->parameters.size();
+    for(int i=0;i<swarm.size();i++)
+    {
+        swarm.at(i)->clearParameters();
+    }
+    for(int i=0;i<swarm.size();i++)
+    {
+        swarm.at(i)->parameters.resize(s);
+    }
 }

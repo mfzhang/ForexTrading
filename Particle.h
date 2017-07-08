@@ -32,7 +32,7 @@ public:
     double getFitness();
     void setFitness(double f);
     
-    virtual void initialiseParticle();
+    virtual void initialiseParticle()=0;
     virtual void printSelf();
     double fitness;
     vector<double> parameters;

@@ -30,11 +30,8 @@ int main(int argc, char** argv) {
     std::mt19937 e2(rd());
     std::uniform_real_distribution<> dist(0, 2+1);
 
-    cout<<dist(e2)<<endl;
-    cout<<dist(e2)<<endl;
-    cout<<dist(e2)<<endl;
-    
-    /*
+
+
     DataStore * a=new DataStore(6);
    
     cout<<"Hello World"<<endl;
@@ -55,9 +52,7 @@ int main(int argc, char** argv) {
     wv.push_back(0.1);
     wv.push_back(0.1);
     wv.push_back(0.1);
-    //a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",10,0);
-    //a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",20,);
-    
+
     a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",20,0);
     a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",100,0);
     a->refreshBuyIndicators();
@@ -73,30 +68,32 @@ int main(int argc, char** argv) {
     a->refreshSellIndicators();
     cout<<"Buy Decision: "<<to_string(a->determineIfBuy(ab,wv))<<endl;
     cout<<"Sell Decision: "<<to_string(a->determineIfSell(ab,wv))<<endl;
-    */
-    /*
 
-        a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",30,30);
-    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",100,100);
-    cout<<"Decision: "<<to_string(a->determineDecision(ab,1,wv))<<endl;
-    a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",30,60);
-    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",100,200);
-    cout<<"Decision: "<<to_string(a->determineDecision(ab,1,wv))<<endl;
-    //cout<<"Simple Moving Average:"<<to_string(a->requestIndicatorReading(0))<<endl;
-    //a->printList();
-    */
-    
+    a->printList();
+    a->printListOfOHLC();
+
+    cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
+    cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
     WeightVectorSwarm * swarm1;
     ParameterSwarm * swarm2;
     StrategySwarm * swarm3;
     cout<<"Swarm 1"<<endl;
-    swarm1=new WeightVectorSwarm(10);
-
+    swarm1=new WeightVectorSwarm(3);
+    swarm1->initialiseSwarm();
     cout<<"Swarm 2"<<endl;
-    swarm2=new ParameterSwarm(10);
-    
-    swarm3=new StrategySwarm(10);
+    swarm2=new ParameterSwarm(3);
+    swarm2->initialiseSwarm();
     cout<<"Swarm 3"<<endl;
+    swarm3=new StrategySwarm(3);
+    swarm3->initialiseSwarm();
+
+    swarm1->resetSwarm();
+    swarm2->resetSwarm();
+    swarm3->resetSwarm();
+
+    swarm1->initialiseSwarm();
+    swarm2->initialiseSwarm();
+    swarm3->initialiseSwarm();
 
     delete swarm1;
     delete swarm2;

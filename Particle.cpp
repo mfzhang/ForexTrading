@@ -60,10 +60,6 @@ void Particle::setFitness(double f)
     this->fitness=f;
 }
 
-void Particle::initialiseParticle()
-{
-
-}
 
 void Particle::printSelf()
 {   

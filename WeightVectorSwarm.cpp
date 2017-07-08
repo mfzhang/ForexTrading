@@ -16,24 +16,30 @@
 
 WeightVectorSwarm::WeightVectorSwarm(int s) {
     swarmSize=s;
-    
-    
-    for (int i=0;i<swarmSize;i++)
-    {
-        cout<<"Particle "<<i<<endl;
-        swarm.push_back(new WeightVectorParticle(7));
-        swarm.at(i)->initialiseParticle();
-        swarm.at(i)->printSelf();
-        
-    }
+    swarm.resize(s);
 }
 
 void WeightVectorSwarm::initialiseSwarm()
 {
-    
+
+    for (int i=0;i<swarmSize;i++)
+    {
+        swarm.at(i)=new WeightVectorParticle(7);
+        swarm.at(i)->initialiseParticle();
+        swarm.at(i)->printSelf();
+    }
 }
 
 void WeightVectorSwarm::resetSwarm()
 {
+    int s=swarm.at(0)->parameters.size();
+    for(int i=0;i<swarm.size();i++)
+    {
+        swarm.at(i)->clearParameters();
+    }
+    for(int i=0;i<swarm.size();i++)
+    {
+        swarm.at(i)->parameters.resize(s);
+    }
 
 }

@@ -19,6 +19,22 @@ ParameterSwarm::ParameterSwarm(int s) {
     
     swarm.resize(s);
     
+}
+
+void ParameterSwarm::resetSwarm() {
+    int s=swarm.at(0)->parameters.size();
+    for(int i=0;i<swarm.size();i++)
+    {
+        swarm.at(i)->clearParameters();
+    }
+    for(int i=0;i<swarm.size();i++)
+    {
+        swarm.at(i)->parameters.resize(s);
+    }
+}
+
+void ParameterSwarm::initialiseSwarm() {
+
     for (int i=0;i<swarmSize;i++)
     {
         swarm.at(i)=new ParameterParticle(9);
