@@ -34,3 +34,16 @@ Swarm::~Swarm()
         cout<<"Deleted particle: "<<i<<endl;
     }
 }
+
+void Swarm::printParticles() {
+    cout<<"################################################"<<endl;
+    for(int i=0;i<swarm.size();i++)
+    {
+        swarm.at(i)->printSelf();
+    }
+    cout<<"################################################"<<endl;
+}
+
+void Swarm::updatePSOSwarm(double c1, double c2, double w) {
+
+}

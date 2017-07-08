@@ -30,7 +30,6 @@ void StrategySwarm::initialiseSwarm()
     {
         swarm.at(i)=new StrategyParticle(2);
         swarm.at(i)->initialiseParticle();
-        swarm.at(i)->printSelf();
     }
 }
 

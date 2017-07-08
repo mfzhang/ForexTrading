@@ -26,7 +26,6 @@ void WeightVectorSwarm::initialiseSwarm()
     {
         swarm.at(i)=new WeightVectorParticle(7);
         swarm.at(i)->initialiseParticle();
-        swarm.at(i)->printSelf();
     }
 }
 

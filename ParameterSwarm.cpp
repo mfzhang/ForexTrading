@@ -39,6 +39,5 @@ void ParameterSwarm::initialiseSwarm() {
     {
         swarm.at(i)=new ParameterParticle(9);
         swarm.at(i)->initialiseParticle();
-        swarm.at(i)->printSelf();
     }
 }

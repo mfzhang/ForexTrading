@@ -87,6 +87,10 @@ int main(int argc, char** argv) {
     swarm3=new StrategySwarm(3);
     swarm3->initialiseSwarm();
 
+    swarm1->printParticles();
+    swarm2->printParticles();
+    swarm3->printParticles();
+
     swarm1->resetSwarm();
     swarm2->resetSwarm();
     swarm3->resetSwarm();
@@ -94,6 +98,10 @@ int main(int argc, char** argv) {
     swarm1->initialiseSwarm();
     swarm2->initialiseSwarm();
     swarm3->initialiseSwarm();
+
+    swarm1->printParticles();
+    swarm2->printParticles();
+    swarm3->printParticles();
 
     delete swarm1;
     delete swarm2;

@@ -22,7 +22,9 @@ public:
     virtual void resetSwarm();
     virtual void initialiseSwarm();
     ~Swarm();
+    void printParticles();
 
+    void updatePSOSwarm(double c1,double c2,double w);
 private:
 
 };
