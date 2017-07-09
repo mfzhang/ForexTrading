@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ForexTrading"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ForexTrading">
+				<Option output="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/ForexTrading.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 ForexTrading"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ForexTrading/fast">
+				<Option output="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/ForexTrading.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++/x86_64-pc-cygwin"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/5.4.0/../../../../lib/../include/w32api"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 ForexTrading/fast"/>
+					<CompileFile command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make.exe -j4 -f &quot;/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/DataStore.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/DataStore.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/OHLC.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/OHLC.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterParticle.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterParticle.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterSwarm.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterSwarm.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Particle.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Particle.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategyParticle.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategyParticle.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategySwarm.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategySwarm.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Swarm.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Swarm.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Tick.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Tick.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorParticle.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorParticle.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorSwarm.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorSwarm.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/main.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

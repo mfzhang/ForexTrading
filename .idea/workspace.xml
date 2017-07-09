@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a55f8455-c2e7-443b-9a91-e3621950c423" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="ForexTrading.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -404,7 +403,7 @@
       <updated>1499512550628</updated>
       <workItem from="1499512552118" duration="8919000" />
       <workItem from="1499630866054" duration="208000" />
-      <workItem from="1499631253828" duration="8546000" />
+      <workItem from="1499631253828" duration="8561000" />
     </task>
     <task id="LOCAL-00001" summary="Code Test changes">
       <created>1499515250748</created>
@@ -434,11 +433,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499639706965</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Both swarms and file reading is working.">
+      <created>1499639826019</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1499639826019</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17673000" />
+    <option name="totallyTimeSpent" value="17688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
