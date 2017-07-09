@@ -111,7 +111,7 @@ int main(int argc, char** argv) {
     swarm2->updatePSOSwarm(2.0,2.0,0.1);
 
     swarm3->setProblemType(true);
-    swarm3->updatePSOSwarm(2.0,2.0,0.1);
+    swarm3->updatePSOSwarm(2.0,2.0,0.);
 
     swarm1->printParticles();
     swarm2->printParticles();
