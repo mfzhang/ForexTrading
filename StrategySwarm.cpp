@@ -21,6 +21,8 @@ StrategySwarm::StrategySwarm(int s)
     
     swarm.resize(s);
 
+    swarmType=1;
+
 }
 
 void StrategySwarm::initialiseSwarm()

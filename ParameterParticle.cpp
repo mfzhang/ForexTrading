@@ -21,6 +21,8 @@ ParameterParticle::ParameterParticle()
 ParameterParticle::ParameterParticle(int s)
 {
     parameters.resize(s);
+    fitness=0.0;
+    personalBest.resize(s);
 }
 
 void ParameterParticle::printSelf()
@@ -37,15 +39,21 @@ void ParameterParticle::printSelf()
 
 void ParameterParticle::initialiseParticle()
 {
-    double lower_bound = 0;
-    double upper_bound = 2;
+    double lower_bound = 2;
+    double upper_bound = 4;
 
+    velocity.resize(9);
+
+    for(int i=0;i<velocity.size();i++)
+    {
+        velocity.at(i)=0.0;
+    }
 
     for (int i = 0; i < parameters.size(); i++) {
 
         if (i == 2 || i == 5 || i == 8) {
-            lower_bound = 0.8;
-            upper_bound = 1.2;
+            lower_bound = 0.0;
+            upper_bound = 1.0;
 
             std::random_device rd;
             std::mt19937 e2(rd());

@@ -31,11 +31,22 @@ public:
     double getValueAtIndex(int index);
     double getFitness();
     void setFitness(double f);
-    
+
+
     virtual void initialiseParticle()=0;
     virtual void printSelf();
     double fitness;
+
+
+    vector<double> velocity;
     vector<double> parameters;
+
+    /*
+     * Needs to be updated after running the fitness trial. If the trial produces a better fitness, then update it
+     * otherwise keep it as it
+     * */
+    vector<double> personalBest;
+
 private:
 
 };

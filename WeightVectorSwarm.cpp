@@ -17,6 +17,7 @@
 WeightVectorSwarm::WeightVectorSwarm(int s) {
     swarmSize=s;
     swarm.resize(s);
+    swarmType=2;
 }
 
 void WeightVectorSwarm::initialiseSwarm()

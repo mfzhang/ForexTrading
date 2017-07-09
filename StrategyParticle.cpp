@@ -15,6 +15,8 @@
 
 StrategyParticle::StrategyParticle(int s) {
     parameters.resize(s);
+    fitness=0.0;
+    personalBest.resize(s);
 }
 
 void StrategyParticle::initialiseParticle()
@@ -24,7 +26,11 @@ void StrategyParticle::initialiseParticle()
     std::random_device rd;
     std::mt19937 e2(rd());
     std::uniform_real_distribution<> dist(lower_bound, upper_bound);
-    
+    velocity.resize(2);
+    for(int i=0;i<velocity.size();i++)
+    {
+        velocity.at(i)=0.0;
+    }
     for (int i = 0; i < 2; i++) {
         parameters.at(i) =dist(e2);;
     }

@@ -18,7 +18,7 @@ ParameterSwarm::ParameterSwarm(int s) {
     swarmSize=s;
     
     swarm.resize(s);
-    
+    swarmType=0;
 }
 
 void ParameterSwarm::resetSwarm() {

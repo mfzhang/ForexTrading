@@ -17,11 +17,13 @@ WeightVectorParticle::WeightVectorParticle(int s)
 {
     numIndicators = s;
     parameters.resize(s);
-
+    personalBest.resize(s);
     for(int i=0;i<numIndicators;i++)
     {
         parameters.at(i)=0.0;
     }
+
+    fitness=0.0;
 }
 
 void WeightVectorParticle::initialiseParticle()
@@ -33,7 +35,11 @@ void WeightVectorParticle::initialiseParticle()
     std::mt19937 e2(rd());
     std::uniform_real_distribution<> dist(lower_bound, upper_bound);
 
-    
+    velocity.resize(7);
+    for(int i=0;i<velocity.size();i++)
+    {
+        velocity.at(i)=0.0;
+    }
     for (int i = 0; i < numIndicators; i++) {
        
         parameters.at(i) =dist(e2);

@@ -87,6 +87,7 @@ int main(int argc, char** argv) {
     swarm3=new StrategySwarm(3);
     swarm3->initialiseSwarm();
 
+
     swarm1->printParticles();
     swarm2->printParticles();
     swarm3->printParticles();
@@ -103,6 +104,18 @@ int main(int argc, char** argv) {
     swarm2->printParticles();
     swarm3->printParticles();
 
+    swarm1->setProblemType(true);
+    swarm1->updatePSOSwarm(2.0,2.0,0.1);
+
+    swarm2->setProblemType(true);
+    swarm2->updatePSOSwarm(2.0,2.0,0.1);
+
+    swarm3->setProblemType(true);
+    swarm3->updatePSOSwarm(2.0,2.0,0.1);
+
+    swarm1->printParticles();
+    swarm2->printParticles();
+    swarm3->printParticles();
     delete swarm1;
     delete swarm2;
     delete swarm3;
