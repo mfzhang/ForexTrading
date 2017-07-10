@@ -393,6 +393,60 @@ Tick.cpp.s:
 	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/Tick.cpp.s
 .PHONY : Tick.cpp.s
 
+TradingAgent.o: TradingAgent.cpp.o
+
+.PHONY : TradingAgent.o
+
+# target to build an object file
+TradingAgent.cpp.o:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o
+.PHONY : TradingAgent.cpp.o
+
+TradingAgent.i: TradingAgent.cpp.i
+
+.PHONY : TradingAgent.i
+
+# target to preprocess a source file
+TradingAgent.cpp.i:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TradingAgent.cpp.i
+.PHONY : TradingAgent.cpp.i
+
+TradingAgent.s: TradingAgent.cpp.s
+
+.PHONY : TradingAgent.s
+
+# target to generate assembly for a file
+TradingAgent.cpp.s:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TradingAgent.cpp.s
+.PHONY : TradingAgent.cpp.s
+
+TransactionHistory.o: TransactionHistory.cpp.o
+
+.PHONY : TransactionHistory.o
+
+# target to build an object file
+TransactionHistory.cpp.o:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o
+.PHONY : TransactionHistory.cpp.o
+
+TransactionHistory.i: TransactionHistory.cpp.i
+
+.PHONY : TransactionHistory.i
+
+# target to preprocess a source file
+TransactionHistory.cpp.i:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.i
+.PHONY : TransactionHistory.cpp.i
+
+TransactionHistory.s: TransactionHistory.cpp.s
+
+.PHONY : TransactionHistory.s
+
+# target to generate assembly for a file
+TransactionHistory.cpp.s:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.s
+.PHONY : TransactionHistory.cpp.s
+
 WeightVectorParticle.o: WeightVectorParticle.cpp.o
 
 .PHONY : WeightVectorParticle.o
@@ -513,6 +567,12 @@ help:
 	@echo "... Tick.o"
 	@echo "... Tick.i"
 	@echo "... Tick.s"
+	@echo "... TradingAgent.o"
+	@echo "... TradingAgent.i"
+	@echo "... TradingAgent.s"
+	@echo "... TransactionHistory.o"
+	@echo "... TransactionHistory.i"
+	@echo "... TransactionHistory.s"
 	@echo "... WeightVectorParticle.o"
 	@echo "... WeightVectorParticle.i"
 	@echo "... WeightVectorParticle.s"

@@ -11,13 +11,14 @@
  * Created on 27 June 2017, 12:00 PM
  */
 
+#include <vector>
 #include <cstdlib>
 #include <iostream>
 #include "DataStore.h"
 #include "WeightVectorSwarm.h"
 #include "StrategySwarm.h"
 #include "ParameterSwarm.h"
-
+#include "TradingAgent.h"
 using namespace std;
 
 /*
@@ -31,9 +32,11 @@ int main(int argc, char** argv) {
     std::uniform_real_distribution<> dist(0, 2+1);
 
 
+    vector<TradingAgent *> traders;
+    DataStore * a=new DataStore(7);
 
-    DataStore * a=new DataStore(6);
-   
+
+    traders.push_back(new TradingAgent("USD","ZAR",1000,0));
     cout<<"Hello World"<<endl;
     vector<int> ab;
     vector<double> wv;
@@ -52,7 +55,7 @@ int main(int argc, char** argv) {
     wv.push_back(0.1);
     wv.push_back(0.1);
     wv.push_back(0.1);
-
+    /*
     a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",20,0);
     a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",100,0);
     a->refreshBuyIndicators();
@@ -60,6 +63,8 @@ int main(int argc, char** argv) {
     a->printListOfOHLC();
     cout<<to_string(a->priceLookUpBuy("20160103 173900"))<<endl;
     cout<<to_string(a->priceLookUpSell("20160103 173900"))<<endl;
+
+
     cout<<"Buy Decision: "<<to_string(a->determineIfBuy(ab,wv))<<endl;
     cout<<"Sell Decision: "<<to_string(a->determineIfSell(ab,wv))<<endl;
     a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",20,20);
@@ -68,9 +73,9 @@ int main(int argc, char** argv) {
     a->refreshSellIndicators();
     cout<<"Buy Decision: "<<to_string(a->determineIfBuy(ab,wv))<<endl;
     cout<<"Sell Decision: "<<to_string(a->determineIfSell(ab,wv))<<endl;
+    */
 
-    a->printList();
-    a->printListOfOHLC();
+
 
     cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
     cout<<"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"<<endl;
@@ -86,13 +91,73 @@ int main(int argc, char** argv) {
     cout<<"Swarm 3"<<endl;
     swarm3=new StrategySwarm(3);
     swarm3->initialiseSwarm();
+    /*
+    a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",100,0);
+    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",500,0);
+    a->refreshBuyIndicators();
+    a->refreshSellIndicators();
+    traders.at(0)->conductTransaction(a->determineIfBuy(ab,swarm1->swarm.at(0)->parameters),
+                                      a->determineIfSell(ab,swarm1->swarm.at(0)->parameters),
+                                      swarm3->swarm.at(0)->parameters,a->latestPriceSell(),a->latestPriceBuy());
 
+
+    a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",100,100);
+    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",500,500);
+    a->refreshBuyIndicators();
+    a->refreshSellIndicators();
+    traders.at(0)->conductTransaction(a->determineIfBuy(ab,swarm1->swarm.at(0)->parameters),
+                                      a->determineIfSell(ab,swarm1->swarm.at(0)->parameters),
+                                      swarm3->swarm.at(0)->parameters,a->latestPriceSell(),a->latestPriceBuy());
+
+    a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",100,200);
+    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",500,1000);
+    a->refreshBuyIndicators();
+    a->refreshSellIndicators();
+    traders.at(0)->conductTransaction(a->determineIfBuy(ab,swarm1->swarm.at(0)->parameters),
+                                      a->determineIfSell(ab,swarm1->swarm.at(0)->parameters),
+                                      swarm3->swarm.at(0)->parameters,a->latestPriceSell(),a->latestPriceBuy());
+
+    a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",100,300);
+    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",500,1500);
+    a->refreshBuyIndicators();
+    a->refreshSellIndicators();
+    traders.at(0)->conductTransaction(a->determineIfBuy(ab,swarm1->swarm.at(0)->parameters),
+                                      a->determineIfSell(ab,swarm1->swarm.at(0)->parameters),
+                                      swarm3->swarm.at(0)->parameters,a->latestPriceSell(),a->latestPriceBuy());
+
+    a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",100,400);
+    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",500,2000);
+    a->refreshBuyIndicators();
+    a->refreshSellIndicators();
+    traders.at(0)->conductTransaction(a->determineIfBuy(ab,swarm1->swarm.at(0)->parameters),
+                                      a->determineIfSell(ab,swarm1->swarm.at(0)->parameters),
+                                      swarm3->swarm.at(0)->parameters,a->latestPriceSell(),a->latestPriceBuy());
 
     swarm1->printParticles();
     swarm2->printParticles();
     swarm3->printParticles();
+    */
+    a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",50,0);
+    a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv");
 
-    swarm1->resetSwarm();
+    a->refreshBuyIndicators();
+    a->refreshSellIndicators();
+    for(int i=1;i<50;i++)
+    {
+        a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",50,i*50);
+        a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv");
+        a->refreshBuyIndicators();
+        a->refreshSellIndicators();
+        traders.at(0)->conductTransaction(a->determineIfBuy(ab,swarm1->swarm.at(0)->parameters),
+                                          a->determineIfSell(ab,swarm1->swarm.at(0)->parameters),
+                                          swarm3->swarm.at(0)->parameters,a->latestPriceSell(),a->latestPriceBuy());
+
+    }
+    traders.at(0)->calculateProfit();
+    cout<<"Profit from trading period: "<<traders.at(0)->profit<<endl;
+    /*
+
+    swarm1->resetSwarm();]
     swarm2->resetSwarm();
     swarm3->resetSwarm();
 
@@ -116,9 +181,12 @@ int main(int argc, char** argv) {
     swarm1->printParticles();
     swarm2->printParticles();
     swarm3->printParticles();
+    */
     delete swarm1;
     delete swarm2;
     delete swarm3;
+
+    delete traders.at(0);
     return 0;
 }
 

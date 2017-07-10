@@ -136,6 +136,30 @@ Tick.h
 string
 -
 
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.cpp
+TradingAgent.h
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.h
+
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.h
+cmath
+-
+iostream
+-
+string
+-
+TransactionHistory.h
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.h
+vector
+-
+
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.cpp
+TransactionHistory.h
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.h
+
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.h
+string
+-
+
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorParticle.cpp
 WeightVectorParticle.h
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorParticle.h
@@ -155,6 +179,8 @@ Swarm.h
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Swarm.h
 
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/main.cpp
+vector
+-
 cstdlib
 -
 iostream
@@ -167,4 +193,6 @@ StrategySwarm.h
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategySwarm.h
 ParameterSwarm.h
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterSwarm.h
+TradingAgent.h
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.h
 

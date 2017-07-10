@@ -45,6 +45,13 @@ CMakeFiles/ForexTrading.dir/Swarm.cpp.o: ../Swarm.h
 CMakeFiles/ForexTrading.dir/Tick.cpp.o: ../Tick.cpp
 CMakeFiles/ForexTrading.dir/Tick.cpp.o: ../Tick.h
 
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o: ../TradingAgent.cpp
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o: ../TradingAgent.h
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o: ../TransactionHistory.h
+
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o: ../TransactionHistory.cpp
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o: ../TransactionHistory.h
+
 CMakeFiles/ForexTrading.dir/WeightVectorParticle.cpp.o: ../Particle.h
 CMakeFiles/ForexTrading.dir/WeightVectorParticle.cpp.o: ../WeightVectorParticle.cpp
 CMakeFiles/ForexTrading.dir/WeightVectorParticle.cpp.o: ../WeightVectorParticle.h
@@ -63,6 +70,8 @@ CMakeFiles/ForexTrading.dir/main.cpp.o: ../Particle.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../StrategySwarm.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../Swarm.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../Tick.h
+CMakeFiles/ForexTrading.dir/main.cpp.o: ../TradingAgent.h
+CMakeFiles/ForexTrading.dir/main.cpp.o: ../TransactionHistory.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../WeightVectorSwarm.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../main.cpp
 

@@ -48,19 +48,24 @@ public:
     void printListOfOHLC();
     void addToOHLCVector(string a, double b, double c, double d, double e, int f);
     void readInTicksFromFile(string fn, int numberOfTicks, int startingIndex);
+    void readInTicksFromFile(string fn);
     void readInOLHCFromFile(string fn, int numberOfEntries, int startingIndex);
 
     double priceLookUpBuy(string date);
     double priceLookUpSell(string date);
     //int determineDecision(vector<int> indicator, int decision,vector<double> weightVector);
     
-    
+    double latestPriceBuy();
+    double latestPriceSell();
+    string latestDateOLHC();
     //Returns the value of the indicators * weight vector
     double determineIfBuy(vector<int> indicatorList,vector<double> weightVector);
     double determineIfSell(vector<int> indicatorList,vector<double> weightVector);
     
     void refreshBuyIndicators();
     void refreshSellIndicators();
+
+    int computeProximityIndex();
 };
 
 #endif /* DATASTORE_H */

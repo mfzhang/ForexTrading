@@ -18,9 +18,8 @@ DataStore::DataStore()
 
 DataStore::DataStore(int a)
 {
-    cout << a << endl;
     //Number of indicators
-    indicators = new IndicatorManager(1);
+    indicators = new IndicatorManager(7);
 }
 
 std::string DataStore::getFileName()
@@ -138,7 +137,63 @@ void DataStore::readInOLHCFromFile(string fn, int numberOfEntries, int startingI
     }
 
     myfile.close();
-    cout << "Done Loading OHLC" << endl;
+    ///cout << "Done Loading OHLC" << endl;
+}
+
+void DataStore::readInTicksFromFile(string fn) {
+
+    if (priceVector.empty() == false) {
+        priceVector.clear();
+    }
+    ifstream myfile;
+    int lineCount = 0;
+
+
+    myfile.open(fn);
+    string sline;
+
+    char *c;
+    stringstream stream;
+    string ss;
+    string tmpDate=ohlcVector.back().getDate();
+    bool co=true;
+    while (co==true) {
+        getline(myfile, sline);
+
+
+        string a;
+        double b, g;
+        int d;
+
+        a = sline.substr(0, sline.find(","));
+        sline = sline.substr(sline.find(",") + 1);
+
+        stream << fixed << setprecision(6) << sline.substr(0, sline.find(",") - 1);
+        ss = stream.str();
+        stream.str(string());
+
+        b = atof(ss.c_str());
+        sline = sline.substr(sline.find(",") + 1);
+
+        stream << fixed << setprecision(6) << sline.substr(0, sline.find(",") - 1);
+        ss = stream.str();
+        stream.str(string());
+
+        g = atof(ss.c_str());
+        sline = sline.substr(sline.find(",") + 1);
+        d = stoi(sline);
+        addToPriceVector(a, b, g, d);
+
+        if (a>tmpDate)
+        {
+            co=false;
+        }
+    }
+
+    string gg=priceVector.back().getDateTime();
+    int s=priceVector.size();
+    myfile.close();
+    //cout << "Done Loading Ticks" << endl;
 }
 
 void DataStore::readInTicksFromFile(string fn, int numberOfTicks, int startingIndex)
@@ -214,7 +269,7 @@ void DataStore::readInTicksFromFile(string fn, int numberOfTicks, int startingIn
     }
 
     myfile.close();
-    cout << "Done Loading Ticks" << endl;
+    //cout << "Done Loading Ticks" << endl;
 }
 
 double DataStore::priceLookUpBuy(string date)
@@ -269,4 +324,28 @@ void DataStore::refreshBuyIndicators()
 void DataStore::refreshSellIndicators()
 {
     indicators->populateSellIndicatorVariables(ohlcVector,priceVector);
+}
+
+double DataStore::latestPriceBuy() {
+    return this->priceVector.back().getAskQuote();
+}
+
+double DataStore::latestPriceSell() {
+    return this->priceVector.back().getBidQuote();
+}
+
+int DataStore::computeProximityIndex() {
+
+    string tmpD=ohlcVector.back().getDate();
+    int i = 0;
+    while (i < priceVector.size() && priceVector.at(i).getDateTime()<tmpD) {
+        i++;
+    }
+    return (i-1);
+
+    return 0;
+}
+
+string DataStore::latestDateOLHC() {
+    return ohlcVector.back().getDate();
 }

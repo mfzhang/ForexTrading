@@ -369,6 +369,54 @@ CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o.provides: CMakeFiles/ForexTr
 CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o.provides.build: CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o
 
 
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o: CMakeFiles/ForexTrading.dir/flags.make
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o: ../TradingAgent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o -c /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.cpp
+
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ForexTrading.dir/TradingAgent.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.cpp > CMakeFiles/ForexTrading.dir/TradingAgent.cpp.i
+
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ForexTrading.dir/TradingAgent.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.cpp -o CMakeFiles/ForexTrading.dir/TradingAgent.cpp.s
+
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.requires:
+
+.PHONY : CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.requires
+
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.provides: CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.provides.build
+.PHONY : CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.provides
+
+CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.provides.build: CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o
+
+
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o: CMakeFiles/ForexTrading.dir/flags.make
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o: ../TransactionHistory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o"
+	/usr/bin/c++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o -c /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.cpp
+
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.i"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.cpp > CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.i
+
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.s"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.cpp -o CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.s
+
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.requires:
+
+.PHONY : CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.requires
+
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.provides: CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.provides.build
+.PHONY : CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.provides
+
+CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.provides.build: CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o
+
+
 # Object files for target ForexTrading
 ForexTrading_OBJECTS = \
 "CMakeFiles/ForexTrading.dir/DataStore.cpp.o" \
@@ -383,7 +431,9 @@ ForexTrading_OBJECTS = \
 "CMakeFiles/ForexTrading.dir/Swarm.cpp.o" \
 "CMakeFiles/ForexTrading.dir/Tick.cpp.o" \
 "CMakeFiles/ForexTrading.dir/WeightVectorParticle.cpp.o" \
-"CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o"
+"CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o" \
+"CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o" \
+"CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o"
 
 # External object files for target ForexTrading
 ForexTrading_EXTERNAL_OBJECTS =
@@ -401,9 +451,11 @@ ForexTrading.exe: CMakeFiles/ForexTrading.dir/Swarm.cpp.o
 ForexTrading.exe: CMakeFiles/ForexTrading.dir/Tick.cpp.o
 ForexTrading.exe: CMakeFiles/ForexTrading.dir/WeightVectorParticle.cpp.o
 ForexTrading.exe: CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o
+ForexTrading.exe: CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o
+ForexTrading.exe: CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o
 ForexTrading.exe: CMakeFiles/ForexTrading.dir/build.make
 ForexTrading.exe: CMakeFiles/ForexTrading.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ForexTrading.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable ForexTrading.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ForexTrading.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -424,6 +476,8 @@ CMakeFiles/ForexTrading.dir/requires: CMakeFiles/ForexTrading.dir/Swarm.cpp.o.re
 CMakeFiles/ForexTrading.dir/requires: CMakeFiles/ForexTrading.dir/Tick.cpp.o.requires
 CMakeFiles/ForexTrading.dir/requires: CMakeFiles/ForexTrading.dir/WeightVectorParticle.cpp.o.requires
 CMakeFiles/ForexTrading.dir/requires: CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o.requires
+CMakeFiles/ForexTrading.dir/requires: CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o.requires
+CMakeFiles/ForexTrading.dir/requires: CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o.requires
 
 .PHONY : CMakeFiles/ForexTrading.dir/requires
 

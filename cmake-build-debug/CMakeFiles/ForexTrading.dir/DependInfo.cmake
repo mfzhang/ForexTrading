@@ -14,6 +14,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategySwarm.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/StrategySwarm.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Swarm.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/Swarm.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Tick.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/Tick.cpp.o"
+  "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o"
+  "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorParticle.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/WeightVectorParticle.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorSwarm.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/main.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/main.cpp.o"

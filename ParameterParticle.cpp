@@ -39,8 +39,8 @@ void ParameterParticle::printSelf()
 
 void ParameterParticle::initialiseParticle()
 {
-    double lower_bound = 2;
-    double upper_bound = 4;
+    double lower_bound = 20;
+    double upper_bound = 40;
 
     velocity.resize(9);
 

@@ -140,6 +140,18 @@
 		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Tick.h">
 			<Option target="ForexTrading"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.h">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.cpp">
+			<Option target="ForexTrading"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.h">
+			<Option target="ForexTrading"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorParticle.cpp">
 			<Option target="ForexTrading"/>
 		</Unit>
