@@ -7,6 +7,20 @@ CMakeFiles/ForexTrading.dir/DataStore.cpp.o: ../IndicatorManager.h
 CMakeFiles/ForexTrading.dir/DataStore.cpp.o: ../OHLC.h
 CMakeFiles/ForexTrading.dir/DataStore.cpp.o: ../Tick.h
 
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../DataStore.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../ExperimentFramework.cpp
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../ExperimentFramework.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../IndicatorManager.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../OHLC.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../ParameterSwarm.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../Particle.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../StrategySwarm.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../Swarm.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../Tick.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../TradingAgent.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../TransactionHistory.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o: ../WeightVectorSwarm.h
+
 CMakeFiles/ForexTrading.dir/IndicatorManager.cpp.o: ../IndicatorManager.cpp
 CMakeFiles/ForexTrading.dir/IndicatorManager.cpp.o: ../IndicatorManager.h
 CMakeFiles/ForexTrading.dir/IndicatorManager.cpp.o: ../OHLC.h

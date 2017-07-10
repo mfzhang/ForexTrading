@@ -154,7 +154,7 @@ int main(int argc, char** argv) {
                                           swarm3->swarm.at(0)->parameters,a->latestPriceSell(),a->latestPriceBuy());
 
     }
-    traders.at(0)->calculateProfit();
+    traders.at(0)->calculatePerformanceMetrics();
     cout<<"Profit from trading period: "<<traders.at(0)->profit<<endl;
     /*
 

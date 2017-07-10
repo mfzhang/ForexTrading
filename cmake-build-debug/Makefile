@@ -150,6 +150,33 @@ DataStore.cpp.s:
 	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/DataStore.cpp.s
 .PHONY : DataStore.cpp.s
 
+ExperimentFramework.o: ExperimentFramework.cpp.o
+
+.PHONY : ExperimentFramework.o
+
+# target to build an object file
+ExperimentFramework.cpp.o:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o
+.PHONY : ExperimentFramework.cpp.o
+
+ExperimentFramework.i: ExperimentFramework.cpp.i
+
+.PHONY : ExperimentFramework.i
+
+# target to preprocess a source file
+ExperimentFramework.cpp.i:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.i
+.PHONY : ExperimentFramework.cpp.i
+
+ExperimentFramework.s: ExperimentFramework.cpp.s
+
+.PHONY : ExperimentFramework.s
+
+# target to generate assembly for a file
+ExperimentFramework.cpp.s:
+	$(MAKE) -f CMakeFiles/ForexTrading.dir/build.make CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.s
+.PHONY : ExperimentFramework.cpp.s
+
 IndicatorManager.o: IndicatorManager.cpp.o
 
 .PHONY : IndicatorManager.o
@@ -540,6 +567,9 @@ help:
 	@echo "... DataStore.o"
 	@echo "... DataStore.i"
 	@echo "... DataStore.s"
+	@echo "... ExperimentFramework.o"
+	@echo "... ExperimentFramework.i"
+	@echo "... ExperimentFramework.s"
 	@echo "... IndicatorManager.o"
 	@echo "... IndicatorManager.i"
 	@echo "... IndicatorManager.s"

@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/DataStore.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/DataStore.cpp.o"
+  "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ExperimentFramework.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/IndicatorManager.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/OHLC.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/OHLC.cpp.o"
   "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterParticle.cpp" "/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/cmake-build-debug/CMakeFiles/ForexTrading.dir/ParameterParticle.cpp.o"

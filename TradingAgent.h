@@ -26,6 +26,11 @@ public:
     double buyingCurrency;
     double boughtCurrency;
     double profit;
+    double loss;
+    double profitRatio;
+    double lossRatio;
+
+
     string getBuyingCurrency();
     string getBoughtCurrency();
 
@@ -34,7 +39,7 @@ public:
 
     void recordTransaction(string curr,double price,int volume,int type);
     void conductTransaction(double buySignal,double sellSignal,vector<double> stratParameters,double bid,double ask);
-    void calculateProfit();
+    void calculatePerformanceMetrics();
 
 };
 

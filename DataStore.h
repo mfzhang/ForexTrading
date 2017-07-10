@@ -31,6 +31,7 @@ class DataStore
 {
 private:
     string fileName;
+    string OLHCfn,tickfn;
     vector<Tick> priceVector;
     vector<OHLC> ohlcVector;
     IndicatorManager * indicators;
@@ -40,6 +41,12 @@ public:
     DataStore(int a);
     ~DataStore();
     void setFileName(string a);
+
+    string getOLHCfn();
+    string getTickfn();
+
+    void setOLHCfn(string a);
+    void setTickfn(string a);
 
     string getFileName();
 

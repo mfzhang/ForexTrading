@@ -349,3 +349,19 @@ int DataStore::computeProximityIndex() {
 string DataStore::latestDateOLHC() {
     return ohlcVector.back().getDate();
 }
+
+string DataStore::getOLHCfn() {
+    return this->OLHCfn;
+}
+
+string DataStore::getTickfn() {
+    return this->tickfn;
+}
+
+void DataStore::setOLHCfn(string a) {
+    this->OLHCfn=a;
+}
+
+void DataStore::setTickfn(string a) {
+    this->tickfn=a;
+}

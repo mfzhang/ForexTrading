@@ -69,15 +69,21 @@ void TradingAgent::conductTransaction(double buySignal, double sellSignal, vecto
         }
 }
 
-void TradingAgent::calculateProfit() {
+void TradingAgent::calculatePerformanceMetrics() {
     double p=0.0;
 
     p=buyingCurrency-initialStartingCapital;
-
-    profit=p;
-
-    cout<<"Buying Currency: "<<to_string(buyingCurrency)<<endl;
-    cout<<"Bought Currency:"<<to_string(boughtCurrency)<<endl;
+    if (p>0)
+    {
+        profit=p;
+        profitRatio=profit/transactionList.size();
+    } else
+        {
+            loss=p;
+            lossRatio=loss/transactionList.size();
+        }
+    //cout<<"Buying Currency: "<<to_string(buyingCurrency)<<endl;
+    //cout<<"Bought Currency:"<<to_string(boughtCurrency)<<endl;
 
     transactionList.clear();
 }

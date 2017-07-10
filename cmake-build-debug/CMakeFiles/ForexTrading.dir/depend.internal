@@ -7,6 +7,20 @@ CMakeFiles/ForexTrading.dir/DataStore.cpp.o
  /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.h
  /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/OHLC.h
  /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Tick.h
+CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/DataStore.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ExperimentFramework.cpp
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ExperimentFramework.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/OHLC.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterSwarm.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Particle.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategySwarm.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Swarm.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/Tick.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TransactionHistory.h
+ /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorSwarm.h
 CMakeFiles/ForexTrading.dir/IndicatorManager.cpp.o
  /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.cpp
  /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.h

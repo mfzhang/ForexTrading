@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o"
   "CMakeFiles/ForexTrading.dir/TradingAgent.cpp.o"
   "CMakeFiles/ForexTrading.dir/TransactionHistory.cpp.o"
+  "CMakeFiles/ForexTrading.dir/ExperimentFramework.cpp.o"
   "ForexTrading.pdb"
   "ForexTrading.exe"
   "libForexTrading.dll.a"
