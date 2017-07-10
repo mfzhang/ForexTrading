@@ -35,11 +35,12 @@ int main(int argc, char** argv) {
     vector<TradingAgent *> traders;
     DataStore * a=new DataStore(7);
 
-    vector<int> ab;
-    vector<double> wv;
 
     traders.push_back(new TradingAgent("USD","ZAR",1000,0));
     cout<<"Hello World"<<endl;
+    vector<int> ab;
+    vector<double> wv;
+
     ab.push_back(0);
     ab.push_back(1);
     ab.push_back(2);
