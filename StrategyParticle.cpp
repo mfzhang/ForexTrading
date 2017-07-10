@@ -21,7 +21,7 @@ StrategyParticle::StrategyParticle(int s) {
 
 void StrategyParticle::initialiseParticle()
 {
-    double lower_bound = 0;
+    double lower_bound = 0.3;
     double upper_bound = 1;
     std::random_device rd;
     std::mt19937 e2(rd());

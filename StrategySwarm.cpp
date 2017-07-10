@@ -81,11 +81,11 @@ void StrategySwarm::updatePSOSwarm(vector<Particle *> swarmParams) {
         for(int j=0;j<swarm.at(0)->parameters.size();j++)
         {
             ////Update Velocity
-            omega1=swarmParams.at(j)->parameters.at(3)*r1.at(j);
-            omega2=swarmParams.at(j)->parameters.at(4)*r2.at(j);
+            omega1=swarmParams.at(i)->parameters.at(3)*r1.at(j);
+            omega2=swarmParams.at(i)->parameters.at(4)*r2.at(j);
             omega=omega1+omega2;
 
-            X=2*(swarmParams.at(j)->parameters.at(5))/(2-(omega)-(sqrt(abs(omega*(omega-4)))));
+            X=2*(swarmParams.at(i)->parameters.at(5))/(2-(omega)-(sqrt(abs(omega*(omega-4)))));
 
             swarm.at(i)->velocity.at(j)=X*(swarm.at(i)->velocity.at(j)+
                                            omega1*(swarm.at(i)->personalBest.at(j)-swarm.at(i)->parameters.at(j))+

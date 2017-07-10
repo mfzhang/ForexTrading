@@ -36,6 +36,8 @@ public:
     virtual void initialiseParticle()=0;
     virtual void printSelf();
     double fitness;
+    double personalBestFitness;
+
 
 
     vector<double> velocity;
@@ -47,6 +49,7 @@ public:
      * */
     vector<double> personalBest;
 
+    void copyIntoPersonalBest(vector<double> pBest);
 private:
 
 };

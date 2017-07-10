@@ -51,14 +51,12 @@ void TradingAgent::conductTransaction(double buySignal, double sellSignal, vecto
     {
         cout<<"BOUGHT"<<endl;
         double vol=floor((stratParameters.at(0)*buyingCurrency)/ask);
-        boughtCurrency=boughtCurrency+vol;
-        buyingCurrency=buyingCurrency-floor((stratParameters.at(0)*buyingCurrency));
-        cout<<"Current Buying Currency: "<<buyingCurrency<<endl;
-        cout<<"Current Bought Currency: "<<boughtCurrency<<endl;
+        buyingCurrency=buyingCurrency-vol;
+
+        boughtCurrency=boughtCurrency+(vol*ask);
         recordTransaction(currencyUsedForBuying,ask,vol,1);
     }else if (sellSignal>buySignal  && boughtCurrency>0)
         {
-            cout<<"SOLD"<<endl;
 
             double vol=floor(boughtCurrency*stratParameters.at(1));
 
@@ -66,8 +64,6 @@ void TradingAgent::conductTransaction(double buySignal, double sellSignal, vecto
 
             buyingCurrency=buyingCurrency+floor(bid*vol);
 
-            cout<<"Current Buying Currency: "<<buyingCurrency<<endl;
-            cout<<"Current Bought Currency: "<<boughtCurrency<<endl;
             recordTransaction(currencyThatIsBought,bid,vol,-1);
 
         }

@@ -12,13 +12,11 @@
  */
 
 #include <vector>
-#include <cstdlib>
 #include <iostream>
 #include "DataStore.h"
 #include "WeightVectorSwarm.h"
-#include "StrategySwarm.h"
-#include "ParameterSwarm.h"
-#include "TradingAgent.h"
+
+#include "ExperimentFramework.h"
 using namespace std;
 
 /*
@@ -26,7 +24,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
     
-    
+    /*
     std::random_device rd;
     std::mt19937 e2(rd());
     std::uniform_real_distribution<> dist(0, 2+1);
@@ -57,7 +55,7 @@ int main(int argc, char** argv) {
     wv.push_back(0.1);
     wv.push_back(0.1);
     wv.push_back(0.1);
-    /*
+
     a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",20,0);
     a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",100,0);
     a->refreshBuyIndicators();
@@ -75,7 +73,7 @@ int main(int argc, char** argv) {
     a->refreshSellIndicators();
     cout<<"Buy Decision: "<<to_string(a->determineIfBuy(ab,wv))<<endl;
     cout<<"Sell Decision: "<<to_string(a->determineIfSell(ab,wv))<<endl;
-    */
+
 
 
 
@@ -93,7 +91,7 @@ int main(int argc, char** argv) {
     cout<<"Swarm 3"<<endl;
     swarm3=new StrategySwarm(3);
     swarm3->initialiseSwarm();
-    /*
+
     a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",100,0);
     a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv",500,0);
     a->refreshBuyIndicators();
@@ -138,7 +136,7 @@ int main(int argc, char** argv) {
     swarm1->printParticles();
     swarm2->printParticles();
     swarm3->printParticles();
-    */
+
     a->readInOLHCFromFile("DAT_ASCII_USDZAR_M1_2016.csv",50,0);
     a->readInTicksFromFile("DAT_ASCII_USDZAR_T_201601.csv");
 
@@ -157,7 +155,6 @@ int main(int argc, char** argv) {
     }
     traders.at(0)->calculatePerformanceMetrics();
     cout<<"Profit from trading period: "<<traders.at(0)->profit<<endl;
-    /*
 
     swarm1->resetSwarm();]
     swarm2->resetSwarm();
@@ -183,12 +180,19 @@ int main(int argc, char** argv) {
     swarm1->printParticles();
     swarm2->printParticles();
     swarm3->printParticles();
-    */
+
     delete swarm1;
     delete swarm2;
     delete swarm3;
 
     delete traders.at(0);
+
+    */
+
+    ExperimentFramework * a=new ExperimentFramework(5,5,0,"USD","ZAR",1000,"DAT_ASCII_USDZAR_M1_2016.csv","DAT_ASCII_USDZAR_T_201601.csv",10);
+
+    a->doExperiment();
+    cout<<"Finished!"<<endl;
     return 0;
 }
 

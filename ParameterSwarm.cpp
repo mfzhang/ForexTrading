@@ -75,11 +75,11 @@ void ParameterSwarm::updatePSOSwarm(vector<Particle *> swarmParams) {
         for(int j=0;j<swarm.at(0)->parameters.size();j++)
         {
             ////Update Velocity
-            omega1=swarmParams.at(j)->parameters.at(6)*r1.at(j);
-            omega2=swarmParams.at(j)->parameters.at(7)*r2.at(j);
+            omega1=swarmParams.at(i)->parameters.at(6)*r1.at(j);
+            omega2=swarmParams.at(i)->parameters.at(7)*r2.at(j);
             omega=omega1+omega2;
 
-            X=2*(swarmParams.at(j)->parameters.at(8)/(2-(omega)-(sqrt(abs(omega*(omega-4))))));
+            X=2*(swarmParams.at(i)->parameters.at(8)/(2-(omega)-(sqrt(abs(omega*(omega-4))))));
 
             swarm.at(i)->velocity.at(j)=X*(swarm.at(i)->velocity.at(j)+
                                            omega1*(swarm.at(i)->personalBest.at(j)-swarm.at(i)->parameters.at(j))+

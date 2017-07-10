@@ -71,3 +71,9 @@ void Particle::printSelf()
     cout<<"============================================================="<<endl;
 }
 
+void Particle::copyIntoPersonalBest(vector<double> pBest) {
+    for(int i=0;i<personalBest.size();i++)
+    {
+        this->personalBest.at(i)=pBest.at(i);
+    }
+}

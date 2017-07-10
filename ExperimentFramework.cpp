@@ -108,15 +108,124 @@ void ExperimentFramework::doExperiment() {
         ////Fitness Evaluation of PSO Algorithm
         for(int j=1;j<numberOfTradingPeriods;j++)
         {
-            dataStore->readInOLHCFromFile(dataStore->getOLHCfn(),numberOfItemsInPeriod,0);
-            dataStore->readInTicksFromFile(dataStore->getTickfn());
-            dataStore->refreshBuyIndicators();
-            dataStore->refreshSellIndicators();
-            traderPool.at(j)->conductTransaction(dataStore->determineIfBuy(ab,weightVectorSwarm->swarm.at(0)->parameters),
-                                              dataStore->determineIfSell(ab,weightVectorSwarm->swarm.at(0)->parameters),
-                                              strategySwarm->swarm.at(0)->parameters,
-                                                 dataStore->latestPriceSell(),
-                                                 dataStore->latestPriceBuy());
+            for(int y=0;y<traderPool.size();y++)
+            {
+                dataStore->readInOLHCFromFile(dataStore->getOLHCfn(),numberOfItemsInPeriod,j*numberOfItemsInPeriod);
+                dataStore->readInTicksFromFile(dataStore->getTickfn());
+                dataStore->refreshBuyIndicators();
+                dataStore->refreshSellIndicators();
+                traderPool.at(y)->conductTransaction(dataStore->determineIfBuy(ab,weightVectorSwarm->swarm.at(y)->parameters),
+                                                     dataStore->determineIfSell(ab,weightVectorSwarm->swarm.at(y)->parameters),
+                                                     strategySwarm->swarm.at(y)->parameters,
+                                                     dataStore->latestPriceSell(),
+                                                     dataStore->latestPriceBuy());
+            }
+
+        }
+        double tmpFit=0.0;
+        for(int h=0;h<traderPool.size();h++)
+        {
+            traderPool.at(h)->calculatePerformanceMetrics();
+
+            switch (this->objChoice)
+            {
+                case 0: tmpFit=traderPool.at(h)->profit;
+                    break;
+                case 1: tmpFit=traderPool.at(h)->profitRatio;
+                    break;
+                case 2: tmpFit=traderPool.at(h)->loss;
+                    break;
+                case 3:tmpFit=traderPool.at(h)->lossRatio;
+                    break;
+            }
+            weightVectorSwarm->swarm.at(h)->setFitness(tmpFit);
+            strategySwarm->swarm.at(h)->setFitness(tmpFit);
+            parameterSwarm->swarm.at(h)->setFitness(tmpFit);
+
+            switch (this->objChoice)
+            {
+                case 0:
+                    if (tmpFit>weightVectorSwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        weightVectorSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        weightVectorSwarm->swarm.at(h)->copyIntoPersonalBest(weightVectorSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit>parameterSwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        parameterSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        parameterSwarm->swarm.at(h)->copyIntoPersonalBest(parameterSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit>strategySwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        strategySwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        strategySwarm->swarm.at(h)->copyIntoPersonalBest(strategySwarm->swarm.at(h)->parameters);
+                    }
+                    weightVectorSwarm->setBestParticleMax();
+                    parameterSwarm->setBestParticleMax();
+                    strategySwarm->setBestParticleMax();
+                    break;
+                case 1:
+                    if (tmpFit>weightVectorSwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        weightVectorSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        weightVectorSwarm->swarm.at(h)->copyIntoPersonalBest(weightVectorSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit>parameterSwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        parameterSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        parameterSwarm->swarm.at(h)->copyIntoPersonalBest(parameterSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit>strategySwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        strategySwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        strategySwarm->swarm.at(h)->copyIntoPersonalBest(strategySwarm->swarm.at(h)->parameters);
+                    }
+                    weightVectorSwarm->setBestParticleMax();
+                    parameterSwarm->setBestParticleMax();
+                    strategySwarm->setBestParticleMax();
+                    break;
+                case 2:
+                    if (tmpFit<weightVectorSwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        weightVectorSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        weightVectorSwarm->swarm.at(h)->copyIntoPersonalBest(weightVectorSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit<parameterSwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        parameterSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        parameterSwarm->swarm.at(h)->copyIntoPersonalBest(parameterSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit<strategySwarm->swarm.at(h)->personalBestFitness)
+                    {
+                        strategySwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        strategySwarm->swarm.at(h)->copyIntoPersonalBest(strategySwarm->swarm.at(h)->parameters);
+                    }
+                    weightVectorSwarm->setBestParticleMin();
+                    parameterSwarm->setBestParticleMin();
+                    strategySwarm->setBestParticleMin();
+                    break;
+
+                case 3:
+                    if (tmpFit<weightVectorSwarm->swarm.at(h)->fitness)
+                    {
+                        weightVectorSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        weightVectorSwarm->swarm.at(h)->copyIntoPersonalBest(weightVectorSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit<parameterSwarm->swarm.at(h)->fitness)
+                    {
+                        parameterSwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        parameterSwarm->swarm.at(h)->copyIntoPersonalBest(parameterSwarm->swarm.at(h)->parameters);
+                    }
+                    if (tmpFit<strategySwarm->swarm.at(h)->fitness)
+                    {
+                        strategySwarm->swarm.at(h)->personalBestFitness=tmpFit;
+                        strategySwarm->swarm.at(h)->copyIntoPersonalBest(strategySwarm->swarm.at(h)->parameters);
+                    }
+                    weightVectorSwarm->setBestParticleMin();
+                    parameterSwarm->setBestParticleMin();
+                    strategySwarm->setBestParticleMin();
+                    break;
+            }
 
         }
         //PSO Updates
