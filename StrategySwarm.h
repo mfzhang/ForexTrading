@@ -20,6 +20,8 @@ public:
     void initialiseSwarm() override;
     void resetSwarm() override;
 
+    void updatePSOSwarm(vector<Particle *> swarmParams) override;
+
 private:
 
 };

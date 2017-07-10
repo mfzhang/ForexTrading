@@ -38,8 +38,9 @@ int main(int argc, char** argv) {
 
     traders.push_back(new TradingAgent("USD","ZAR",1000,0));
     cout<<"Hello World"<<endl;
-    vector<int> ab;
     vector<double> wv;
+
+    vector<int> ab;
 
     ab.push_back(0);
     ab.push_back(1);

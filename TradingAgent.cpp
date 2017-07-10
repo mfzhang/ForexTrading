@@ -27,6 +27,10 @@ TradingAgent::TradingAgent(string buyCurrency,string boughtTCurrency, double buy
     boughtCurrency=boughtCurr;
     buyingCurrency=buyCurr;
     profit=0;
+    profit=0.0;
+    profitRatio=0.0;
+    loss=0.0;
+    lossRatio=0.0;
     initialStartingCapital=buyCurr;
 }
 
@@ -86,4 +90,16 @@ void TradingAgent::calculatePerformanceMetrics() {
     //cout<<"Bought Currency:"<<to_string(boughtCurrency)<<endl;
 
     transactionList.clear();
+}
+
+void TradingAgent::resetTradingAgent() {
+    profit=0.0;
+    profitRatio=0.0;
+    loss=0.0;
+    lossRatio=0.0;
+
+    transactionList.clear();
+
+    boughtCurrency=0;
+    buyingCurrency=initialStartingCapital;
 }

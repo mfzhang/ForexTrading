@@ -44,6 +44,9 @@ void Swarm::printParticles() {
     cout<<"################################################"<<endl;
 }
 
+void Swarm::updatePSOSwarm(vector<Particle *> swarm) {
+}
+
 void Swarm::updatePSOSwarm(double c1, double c2, double k) {
     double X=0.0;
     double omega1=0.0,omega2=0.0,omega=0.0;

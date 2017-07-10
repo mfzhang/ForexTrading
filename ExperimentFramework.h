@@ -26,11 +26,14 @@ private:
     StrategySwarm * strategySwarm;
     ParameterSwarm * parameterSwarm;
     vector<TradingAgent *> traderPool;
+    int numberOfTradingPeriods;
+    int objChoice;
+    int swarmSize;
 
 public:
     ExperimentFramework();
     ExperimentFramework(int swarmSize,int numberOfTraders,int objectiveChoice,string buyingC,string boughtC,
-                        double initialTradingCapital,string OLHCfn,string tickfn);
+                        double initialTradingCapital,string OLHCfn,string tickfn,int numTradingPeriods);
     ~ExperimentFramework();
 
     void doExperiment();

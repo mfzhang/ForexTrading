@@ -41,6 +41,7 @@ public:
     void conductTransaction(double buySignal,double sellSignal,vector<double> stratParameters,double bid,double ask);
     void calculatePerformanceMetrics();
 
+    void resetTradingAgent();
 };
 
 

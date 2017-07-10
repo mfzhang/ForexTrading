@@ -30,7 +30,8 @@ public:
     ~Swarm();
     void printParticles();
     void setProblemType(bool status);
-    void updatePSOSwarm(double c1,double c2,double w);
+    void updatePSOSwarm(double c1,double c2,double k);
+    virtual void updatePSOSwarm(vector<Particle *> swarmParams);
 
     void setBestParticleMin();
     void setBestParticleMax();
