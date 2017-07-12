@@ -77,6 +77,7 @@ CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o: ../WeightVectorSwarm.cpp
 CMakeFiles/ForexTrading.dir/WeightVectorSwarm.cpp.o: ../WeightVectorSwarm.h
 
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../DataStore.h
+CMakeFiles/ForexTrading.dir/main.cpp.o: ../ExperimentFramework.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../IndicatorManager.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../OHLC.h
 CMakeFiles/ForexTrading.dir/main.cpp.o: ../ParameterSwarm.h

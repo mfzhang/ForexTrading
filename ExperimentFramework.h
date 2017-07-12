@@ -15,6 +15,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -36,8 +37,13 @@ public:
                         double initialTradingCapital,string OLHCfn,string tickfn,int numTradingPeriods);
     ~ExperimentFramework();
 
-    void doExperiment();
-    void recordRunData();
+    void doExperimentalTrial();
+
+    void doExperiment(int sscope);
+
+    void recordRunData(string a, string b, vector<double> traderData, vector<double> weightVectorSwarmData,
+                       vector<double> parameterSwarmData,
+                       vector<double> strategySwarmData, string span);
 };
 
 

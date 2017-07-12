@@ -34,8 +34,8 @@ TradingAgent::TradingAgent(string buyCurrency,string boughtTCurrency, double buy
     initialStartingCapital=buyCurr;
 }
 
-void TradingAgent::recordTransaction(string curr, double price, int volume, int type) {
-    this->transactionList.push_back(new TransactionHistory(curr,price,volume,type));
+void TradingAgent::recordTransaction(string curr, double price, int traded, int volume, int type) {
+    this->transactionList.push_back(new TransactionHistory(curr, price, traded, volume, type));
 }
 
 TradingAgent::~TradingAgent() {
@@ -47,24 +47,23 @@ TradingAgent::~TradingAgent() {
 }
 
 void TradingAgent::conductTransaction(double buySignal, double sellSignal, vector<double> stratParameters,double bid,double ask) {
-    if (buySignal>sellSignal && buyingCurrency>0)
+    if (buySignal > sellSignal && buyingCurrency > 0)
     {
-        cout<<"BOUGHT"<<endl;
-        double vol=floor((stratParameters.at(0)*buyingCurrency)/ask);
+        double vol = ((stratParameters.at(0) * buyingCurrency) / ask);
         buyingCurrency=buyingCurrency-vol;
 
         boughtCurrency=boughtCurrency+(vol*ask);
-        recordTransaction(currencyUsedForBuying,ask,vol,1);
+        recordTransaction(currencyUsedForBuying, ask, vol * ask, vol, 1);
     }else if (sellSignal>buySignal  && boughtCurrency>0)
         {
 
-            double vol=floor(boughtCurrency*stratParameters.at(1));
+            double vol = (boughtCurrency * stratParameters.at(1));
 
             boughtCurrency=boughtCurrency-vol;
 
-            buyingCurrency=buyingCurrency+floor(bid*vol);
+            buyingCurrency = buyingCurrency + vol / bid;
 
-            recordTransaction(currencyThatIsBought,bid,vol,-1);
+            recordTransaction(currencyThatIsBought, bid, (vol / bid), vol, -1);
 
         }
 }
@@ -79,13 +78,13 @@ void TradingAgent::calculatePerformanceMetrics() {
         profitRatio=profit/transactionList.size();
     } else
         {
-            loss=p;
+            loss = abs(p);
             lossRatio=loss/transactionList.size();
         }
     //cout<<"Buying Currency: "<<to_string(buyingCurrency)<<endl;
     //cout<<"Bought Currency:"<<to_string(boughtCurrency)<<endl;
 
-    transactionList.clear();
+    //transactionList.clear();
 }
 
 void TradingAgent::resetTradingAgent() {

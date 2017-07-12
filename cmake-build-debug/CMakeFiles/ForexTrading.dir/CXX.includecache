@@ -57,6 +57,8 @@ vector
 -
 string
 -
+fstream
+-
 
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/IndicatorManager.cpp
 algorithm
@@ -203,18 +205,12 @@ Swarm.h
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/main.cpp
 vector
 -
-cstdlib
--
 iostream
 -
 DataStore.h
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/DataStore.h
 WeightVectorSwarm.h
 /cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/WeightVectorSwarm.h
-StrategySwarm.h
-/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/StrategySwarm.h
-ParameterSwarm.h
-/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ParameterSwarm.h
-TradingAgent.h
-/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/TradingAgent.h
+ExperimentFramework.h
+/cygdrive/c/Users/Warmaster/ClionProjects/ForexTrading/ExperimentFramework.h
 

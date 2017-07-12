@@ -191,7 +191,7 @@ int main(int argc, char** argv) {
 
     ExperimentFramework * a=new ExperimentFramework(5,5,0,"USD","ZAR",1000,"DAT_ASCII_USDZAR_M1_2016.csv","DAT_ASCII_USDZAR_T_201601.csv",10);
 
-    a->doExperiment();
+    a->doExperimentalTrial();
     cout<<"Finished!"<<endl;
     return 0;
 }

@@ -32,6 +32,12 @@ void StrategySwarm::initialiseSwarm()
     {
         swarm.at(i)=new StrategyParticle(2);
         swarm.at(i)->initialiseParticle();
+        swarm.at(i)->copyIntoPersonalBest(swarm.at(i)->parameters);
+        if (minimisationProblem == true) {
+            swarm.at(i)->personalBestFitness = numeric_limits<double>::max();
+        } else {
+            swarm.at(i)->personalBestFitness = numeric_limits<double>::min();
+        }
     }
 }
 

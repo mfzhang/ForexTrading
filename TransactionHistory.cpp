@@ -4,9 +4,11 @@
 
 #include "TransactionHistory.h"
 
-TransactionHistory::TransactionHistory(string c, double tp, int v, int t) {
+TransactionHistory::TransactionHistory(string c, double tp, int td, int v, int t) {
     this->currency=c;
     this->tradingPrice=tp;
     this->type=t;
-    this->volume=v;
+    this->bought = td;
+    this->sold = v;
+
 }

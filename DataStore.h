@@ -73,6 +73,10 @@ public:
     void refreshSellIndicators();
 
     int computeProximityIndex();
+
+    void resetFirstRun();
+
+    void setFirstRunToFalse();
 };
 
 #endif /* DATASTORE_H */

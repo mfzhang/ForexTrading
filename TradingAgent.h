@@ -14,14 +14,15 @@ using namespace std;
 
 class TradingAgent {
 private:
-    string currencyUsedForBuying;
-    string currencyThatIsBought;
+
 public:
     TradingAgent(string buyCurrency,string boughtCurrency, double buyCurr, double boughtCurr);
     ~TradingAgent();
 
     vector<TransactionHistory *> transactionList;
 
+    string currencyUsedForBuying;
+    string currencyThatIsBought;
     double initialStartingCapital;
     double buyingCurrency;
     double boughtCurrency;
@@ -37,7 +38,7 @@ public:
     void setBuyingCurrency(string a);
     void setBoughtCurrency(string a);
 
-    void recordTransaction(string curr,double price,int volume,int type);
+    void recordTransaction(string curr, double price, int traded, int vol, int type);
     void conductTransaction(double buySignal,double sellSignal,vector<double> stratParameters,double bid,double ask);
     void calculatePerformanceMetrics();
 

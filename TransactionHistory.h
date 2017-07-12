@@ -12,10 +12,11 @@ class TransactionHistory {
 public:
     string currency;
     double tradingPrice;
-    int volume;
+    int bought;
+    int sold;
     int type;
 
-    TransactionHistory(string c,double tp,int v,int t);
+    TransactionHistory(string c, double tp, int td, int v, int t);
 };
 
 

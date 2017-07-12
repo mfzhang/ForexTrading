@@ -316,6 +316,14 @@ double DataStore::determineIfSell(vector<int> indicatorList, vector<double> weig
     return val;
 }
 
+void DataStore::setFirstRunToFalse() {
+    indicators->setFirstRunToFalse();
+}
+
+void DataStore::resetFirstRun() {
+    indicators->setFirstRunToTrue();
+}
+
 void DataStore::refreshBuyIndicators()
 {
     indicators->populateBuyIndicatorVariables(ohlcVector,priceVector);

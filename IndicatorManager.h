@@ -70,8 +70,10 @@ public:
     double simpleMovingAverageAsk(vector<Tick> eventList);
     double simpleMovingAverageBid(vector<Tick> eventList);
     double simpleMovingAverageOHLC(vector<OHLC> eventList);
-    
-    
+
+    static void setFirstRunToFalse();
+
+    static void setFirstRunToTrue();
 private:
     /**
      * Each of the vectors below contain all of the prior and current decisions
@@ -85,9 +87,7 @@ private:
 
     static bool firstRun;
 
-    static void setFirstRunToTrue();
-    static void setFirstRunToFalse();
-    
+
     //OHLC
     double priorOHLC;
     double currOHLC;
